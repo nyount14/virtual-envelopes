@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg" style="background-color: rgb(187, 183, 187);">
+  <div class="container-fluid">
+    <a class="navbar-brand" style="color: white;" routerLink="/">Virtual Envelopes</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <!-- <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/categories">Categories</a>
+        </li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" style="color: white;" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Envelopes
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li></li>
+            <li><a class="dropdown-item" [routerLink]="['/envelopes','new']">Create an Envelope</a></li>
+            <li><a class="dropdown-item" routerLink="/envelopes">View all Envelopes</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" style="color: white;" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Payment Methods
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li></li>
+            <li><a class="dropdown-item" [routerLink]="['/paymentmethods', 'new']">Add a Payment Method</a></li>
+            <li><a class="dropdown-item" routerLink="/paymentmethods">View All Payment Methods</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" style="color: white;" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Purchases
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li></li>
+            <li><a class="dropdown-item" [routerLink]="['/purchases', 'new']">Make a Purchase</a></li>
+            <li><a class="dropdown-item" routerLink="/purchases">View all Receipts</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

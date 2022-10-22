@@ -1,0 +1,21 @@
+<div class="container" style="margin-top:100px;">
+  <h1 style= "text-align:center">All Payment Methods</h1>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <p *ngIf="paymentMethods.length < 1 && !isFetching">Please add a Payment Method</p>
+      <div *ngIf="paymentMethods.length >= 1 && !isFetching">
+      <app-payment-method-item
+        *ngFor="let paymentMethodEl of paymentMethods; let i = index"
+        [paymentMethod]="paymentMethodEl"
+        [index]="i">
+      </app-payment-method-item>
+    </div>
+    <p *ngIf="isFetching && !error">...IsLoading</p>
+      <div class="alert alert-danger" *ngIf="error">
+        <h1>An Error Occured!</h1>
+        <p>{{ error }}</p>
+        <!-- <button class="btn btn-danger" (click)="onHandleError()"></button> -->
+  </div>
+</div>
+

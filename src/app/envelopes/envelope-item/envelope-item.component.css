@@ -1,0 +1,11 @@
+.card {
+  display:inline-block;
+}
+
+#button1 , #button2 , #button3 {
+  display:inline-block;
+  }
+
+.button {
+  display: inline-block;
+}

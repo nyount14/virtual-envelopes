@@ -1,0 +1,33 @@
+<div class="container">
+  <h1 style="margin-top:100px; text-align:center">Delete receipts you no longer need</h1>
+
+
+  <div class="row">
+    <div class="col-xs-12" *ngIf="!filterData">
+        <app-purchase-item
+        *ngFor="let purchaseEl of purchases; let i = index"
+        [purchase]="purchaseEl"
+        [index]="i"></app-purchase-item>
+    </div>
+    <div class="col-xs-12" *ngIf="filterData">
+        <app-purchase-item
+          *ngFor="let purchaseEl of purchases | filter:filterData:'category'; let i = index"
+        [purchase]="purchaseEl"
+        [index]="i"></app-purchase-item>
+    </div>
+    <div class="col-xs-12" *ngIf="filterData">
+        <app-purchase-item
+        *ngFor="let purchaseEl of purchases | filter:filterData:'paymentmethod'; let i = index"
+        [purchase]="purchaseEl"
+        [index]="i"></app-purchase-item>
+    </div>
+    <!-- <div class="col-xs-12" *ngIf="filterData === purchases['paymentmethod']">
+      <div class="list-group">
+        <app-purchase-item
+        *ngFor="let purchaseEl of purchases | filter:filterData:'paymentmethod'; let i = index"
+        [purchase]="purchaseEl"
+        [index]="i"></app-purchase-item>
+      </div>
+    </div> -->
+  </div>
+</div>
